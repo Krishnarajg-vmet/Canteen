@@ -10,6 +10,7 @@ import com.HealthBite.authService.entity.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
 	Optional<User> findByUserName(String userName);
+	Optional<User> findByUserId(Integer userId);
 	Optional<User> findByEmail(String email);
 	Boolean existsByUserName(String userName);
 	Boolean existsByEmail(String email);

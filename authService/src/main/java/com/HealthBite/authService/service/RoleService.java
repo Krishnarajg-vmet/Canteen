@@ -1,8 +1,17 @@
 package com.HealthBite.authService.service;
 
-import org.springframework.stereotype.Service;
+import java.util.List;
 
-@Service
-public class RoleService {
+import com.HealthBite.authService.dto.ApiResponseDto;
+import com.HealthBite.authService.dto.RoleRequestDto;
+import com.HealthBite.authService.dto.RoleResponseDto;
+
+public interface RoleService {
+	
+	RoleResponseDto createRole(RoleRequestDto dto);
+    RoleResponseDto getRoleById(Short id);
+    List<RoleResponseDto> getAllRoles();
+    RoleResponseDto updateRole(Short id, RoleRequestDto dto);
+    ApiResponseDto<Void> deactivateRole(Short id);
 
 }

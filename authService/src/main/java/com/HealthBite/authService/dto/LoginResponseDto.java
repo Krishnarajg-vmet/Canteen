@@ -18,6 +18,12 @@ public class LoginResponseDto {
         this.isActive = isActive;
     }
 
+
+	public LoginResponseDto() {
+		
+	}
+
+
 	public String getToken() {
 		return token;
 	}
